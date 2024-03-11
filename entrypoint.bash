@@ -50,6 +50,8 @@ done
 echo -e "[ACTION]   BUILD_TAGS: ${BUILD_TAGS}"
 
 echo -e "[ACTION] Building docker image"
+pwd
+echo $GITHUB_WORKSPACE
 # build docker image
 docker build -f "$INPUT_DOCKERFILE" $BUILD_TAGS $BUILD_ARGS .
 
